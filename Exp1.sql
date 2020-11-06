@@ -6,3 +6,5 @@ ALTER TABLE STUDENT DROP MARKS;
 ALTER TABLE STUDENT RENAME TO STUDENTS;
 DELETE FROM STUDENTS;
 DROP TABLE STUDENTS;
+                                                                              
+                                            
