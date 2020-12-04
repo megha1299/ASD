@@ -1,0 +1,20 @@
+-- (a)
+CREATE TABLE Class (
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(50)
+);
+-- (b)
+INSERT INTO Class (`name`) VALUES ("ROMY"), ("SENSEI"), ("ARTHUR");
+-- (c)
+SELECT * FROM Class;
+-- (d) 
+START TRANSACTION;
+INSERT INTO Class (`name`) VALUES ("NEWMAN");
+ROLLBACK; 
+INSERT INTO Class (`name`) VALUES ("NEWMAN");
+COMMIT;
+START TRANSACTION;
+SAVEPOINT BeforeWorldWar;
+INSERT INTO Class (`name`) VALUES ("WORLDWAR");
+ROLLBACK TO BeforeWorldWar;
+COMMIT;
