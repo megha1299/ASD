@@ -1,4 +1,4 @@
- -- A
+--A
 CREATE TABLE Student(
    name varchar(20),
    rollno int(10),
@@ -11,7 +11,7 @@ INSERT INTO Student values(
       ('Emma','8','77')
       );
 
- -- B
+--B
 DECLARE
 	CURSOR student_cursor IS SELECT sname FROM Student ;
 	snm Student.sname %type;
@@ -31,7 +31,7 @@ BEGIN
 	CLOSE student_cursor;
 END;
 
- -- C
+--C
 DECLARE
 	CURSOR student_cursor IS SELECT sname FROM Student;
 BEGIN
